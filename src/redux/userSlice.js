@@ -12,7 +12,14 @@ const initialState = {
 export const userSlice = createSlice({
     name : "userSlice",
     initialState,
-    reducers :{},
+    reducers :{
+        logOut : (state)=>{
+            state.user = null
+            state.isLoding = false
+            state.error = null
+            localStorage.setItem("user", null)
+        }
+    },
     extraReducers: (builder) =>{
         builder.addCase(singInWithGoogle.pending,(state)=>{
             state.isLoding = true;
@@ -30,5 +37,5 @@ export const userSlice = createSlice({
         })
     }
 })
-
+export const { logOut } = userSlice.actions
 export default userSlice.reducer
