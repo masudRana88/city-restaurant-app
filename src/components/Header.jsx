@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MdShoppingBasket,MdAdd,MdLogout } from "react-icons/md";
+import { MdShoppingBasket,MdAdd,MdLogout ,MdOutlineLogin} from "react-icons/md";
 import { motion } from 'framer-motion';
 
 import Logo from "./../img/logo.png"
@@ -20,7 +20,7 @@ const Header = () => {
     // console.log(user.userInfo);
     const [manu , setMane] = useState(false)
 
-    const hendlLogin = async()=>{
+    const hendlLoginMd = async()=>{
         if(!user){
             await dispatch(singInWithGoogle())
         }
@@ -28,6 +28,15 @@ const Header = () => {
             setMane(!manu)
         }
     } 
+    const hendlLoginSm = async() =>{
+        if(!user){
+            await dispatch(singInWithGoogle())
+            setMane(!manu)
+        }
+    } 
+    const hendleOpenManu = async()=>{
+        setMane(!manu)
+    }
     const handleLodOut =()=>{
         dispatch(logOut())
         setMane(!manu)
@@ -64,7 +73,7 @@ const Header = () => {
                 {/* user profile */}
                 <div className='h-full relative '>
                     
-                    <motion.img whileTap={{scale: 0.8}} src={user && user.userInfo ? user.userInfo.photoURL : Avatar} alt="user profile"  className='w-10 h-10 min-h-[40px] min-w-[40px] drop-shadow-lg cursor-pointer rounded-full' onClick={hendlLogin}/>
+                    <motion.img whileTap={{scale: 0.8}} src={user && user.userInfo ? user.userInfo.photoURL : Avatar} alt="user profile"  className='w-10 h-10 min-h-[40px] min-w-[40px] drop-shadow-lg cursor-pointer rounded-full' onClick={hendlLoginMd}/>
 
                     {manu && (
                         <motion.div 
@@ -99,7 +108,7 @@ const Header = () => {
                 </Link>
                 {/* user profile */}
                 <div className='h-full relative'>
-                    <motion.img whileTap={{scale: 0.8}} src={user && user.userInfo ? user.userInfo.photoURL : Avatar} alt="user profile"  className='w-10 h-10 min-h-[40px] min-w-[40px] drop-shadow-lg cursor-pointer rounded-full' onClick={hendlLogin}/>
+                    <motion.img whileTap={{scale: 0.8}} src={user && user.userInfo ? user.userInfo.photoURL : Avatar} alt="user profile"  className='w-10 h-10 min-h-[40px] min-w-[40px] drop-shadow-lg cursor-pointer rounded-full' onClick={hendleOpenManu}/>
 
                     {manu && (
                         <motion.div 
@@ -107,16 +116,23 @@ const Header = () => {
                         animate={{opacity: 1, scale: 1}} 
                         exit={{opacity: 0, scale: 0.6}} 
                         className='flex flex-col absolute top-11 right-2 w-36 bg-gray-50 px-3 py-2 shadow-xl rounded-md'>
-                        <Link to={createcontainer}>
-                        <p className='flex px-2 py-2 items-center justify-start cursor-pointer gap-3 hover:bg-slate-200 transition-all duration-100 ease-out rounded'>New Item <MdAdd/> </p>
-                        </Link>
+                        {   !user &&
+                            <p className='flex px-2 py-2 items-center justify-start cursor-pointer gap-3 hover:bg-blue-300 transition-all duration-100 ease-out rounded' onClick={hendlLoginSm}>Log In<MdOutlineLogin/></p>
+                        }
+                        { user &&
+                            <Link to={createcontainer}>
+                            <p className='flex px-2 py-2 items-center justify-start cursor-pointer gap-3 hover:bg-slate-200 transition-all duration-100 ease-out rounded'>New Item <MdAdd/> </p>
+                            </Link>
+                        }
                         <ul className='flex flex-col'>
                             <li className='flex px-2 py-2 items-center hover:bg-slate-200 text-base  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>Home</li>
                             <li className='flex px-2 py-2 items-center hover:bg-slate-200 text-base hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>Menu</li>
                             <li className='flex px-2 py-2 items-center hover:bg-slate-200 text-base  hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>About us</li>
                             <li className='flex px-2 py-2 items-center hover:bg-slate-200 text-base hover:text-headingColor duration-100 transition-all ease-in-out cursor-pointer'>Service</li>
                         </ul>
-                        <p className='flex px-2 py-2 items-center justify-start cursor-pointer gap-3 hover:bg-red-200 transition-all duration-100 ease-out rounded' onClick={handleLodOut}>Log out <MdLogout/></p>
+                        {   user &&
+                            <p className='flex px-2 py-2 items-center justify-start cursor-pointer gap-3 hover:bg-red-200 transition-all duration-100 ease-out rounded' onClick={handleLodOut}>Log out <MdLogout/></p>
+                        }
                     </motion.div>
                     )}
                 </div>
