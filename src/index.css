@@ -24,6 +24,14 @@ code {
     monospace;
 }
 
+@media screen and (max-width: 1423px) and (min-device-width: 767px) {
+  .card-warp {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    grid-row-gap: 1rem !important;
+    gap: 1rem !important;
+  }
+}
 
 @tailwind base;
 @tailwind components;

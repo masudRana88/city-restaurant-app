@@ -9,9 +9,9 @@ import { createcontainer } from './path';
 function App() {
   return (
     <AnimatePresence exitBeforeEnter>
-    <div className='w-screen h-auto flex flex-col bg-primary'>
+    <div className='flex flex-col w-screen h-auto bg-primary'>
       <Header/>
-      <main className='px-5 md:px-16 mt-20 md:mt-28 mb-6 md:mb-8 w-full'>
+      <main className='w-full px-3 mt-20 mb-6 md:px-16 md:mt-28 md:mb-8'>
         <Routes>
           <Route path='/*' element={<MainContainer/>}/>
           <Route path={createcontainer} element={<CreateContainer/>}/>
