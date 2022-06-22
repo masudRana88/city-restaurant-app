@@ -31,7 +31,7 @@ const HomeContainer = () => {
             <div className="absolute top-0 left-0 flex flex-wrap items-center justify-center w-full h-full gap-4 mt-10 lg:mt-5">
                 { heroData &&
                     heroData.map(card=>(
-                        <div className='flex flex-col items-center justify-center p-4 lg:w-190 bg-cardOverlay backdrop-blur-md rounded-3xl drop-shadow-lg'>
+                        <div className='flex flex-col items-center justify-center p-4 lg:w-190 bg-cardOverlay backdrop-blur-md rounded-3xl drop-shadow-lg' key={card.id}>
                             <img
                                 src={card.imageSrc}
                                 className="w-20 -mt-10 lg:w-40 lg:-mt-20 "

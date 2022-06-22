@@ -4,7 +4,7 @@ import './App.css';
 import CreateContainer from './components/CreateContainer';
 import Header from './components/Header';
 import MainContainer from './components/MainContainer';
-import { createcontainer } from './path';
+import { createcontainer } from './utils/path';
 
 function App() {
   return (
