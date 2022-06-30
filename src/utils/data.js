@@ -9,3 +9,41 @@ export const heroData = [
     {id: 3, name : 'Chicken Kebab', dep: 'Mixed kebab plate', price: 8.25, imageSrc : c3},
     {id: 4, name : 'Fish kebab', dep: 'Mixed Fish Kebab', price: 5.35, imageSrc : fi1}
 ]
+
+export const catagories = [
+    {
+        id : 1,
+        name : "Chicken",
+        urlParamName : 'chicken'
+    },
+    {
+        id : 2,
+        name : "Curry",
+        urlParamName : 'curry'
+    },
+    {
+        id : 3,
+        name : "Fish",
+        urlParamName : 'fish'
+    },
+    {
+        id : 4,
+        name : "Fruits",
+        urlParamName : 'fruits'
+    },
+    {
+        id : 5,
+        name : "Icecreams",
+        urlParamName : 'icecreams'
+    },
+    {
+        id : 6,
+        name : "Rice",
+        urlParamName : 'rice'
+    },
+    {
+        id : 7,
+        name : "Soft Drinks",
+        urlParamName : 'drinks'
+    },
+]

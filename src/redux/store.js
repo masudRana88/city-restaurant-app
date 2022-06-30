@@ -1,9 +1,11 @@
 import { configureStore , getDefaultMiddleware } from '@reduxjs/toolkit'
 import userSlice from './userSlice'
+import uplodeSlice from './uplodeSlice'
 
 const store = configureStore({
     reducer: {
-        userSlice
+        userSlice,
+        uplodeSlice
     },
     middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -25,6 +25,7 @@ code {
     monospace;
 }
 
+
 @media screen and (max-width: 1423px) and (min-device-width: 767px) {
   .card-warp {
     display: grid !important;
