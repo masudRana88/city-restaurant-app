@@ -53,8 +53,8 @@ const HomeContainer = () => {
                 
             </div>
         </div> */}
-        <div className='flex items-center justify-center p-0 lg:p-10'>
-            <img src={hero} alt="" className='w-full h-full'/>
+        <div className='flex min-h-[50%] items-center justify-center '>
+            <img src={hero} alt="" className='lg:max-w-[75%] md:max-w-full'/>
         </div>
     </section>
     );
