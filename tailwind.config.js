@@ -58,10 +58,6 @@ module.exports = {
     },
   },
   plugins: [
-    require('tw-elements/dist/plugin'),
-    function ({ addVariant }) {
-      addVariant('child', '& > *');
-      addVariant('child-hover', '& > *:hover');
-    }
+    require('tailwind-scrollbar'),
   ],
 }
