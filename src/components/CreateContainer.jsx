@@ -8,6 +8,7 @@ import { deleteObject, getDownloadURL, ref, uploadBytesResumable } from 'firebas
 import { storage } from '../Firebase/firebase.cnfig';
 import { useDispatch } from 'react-redux';
 import { saveItemTodb } from '../redux/uplodeSlice';
+import CartContainer from './CartContainer';
 
 const CreateContainer = () => {
     const [title, setTitle] = useState('')
@@ -127,6 +128,7 @@ const CreateContainer = () => {
 
     return (
         <div className='flex items-center justify-center w-full min-h-screen'>
+            <CartContainer/>
             <div className='w-[90%] md:w-[75%] border border-gray-300 rounded-lg p-4 flex flex-col items-center justify-center gap-4'>
                 {/* ====== message ====== */}
                 {fields && (

@@ -10,6 +10,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import { createcontainer } from '../utils/path';
 import MainContainer from './MainContainer';
 import { logOut } from '../redux/userSlice';
+import CartContainer from './CartContainer';
 
 
 
@@ -63,13 +64,13 @@ const Header = () => {
                     <li className='text-base transition-all duration-100 ease-in-out cursor-pointer text-textColor hover:text-headingColor'>Service</li>
                 </motion.ul>
                 {/* ============= cart */}
-                <div className='relative flex items-center justify-center'>
+                <div className='relative flex items-center justify-center cursor-pointer' type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                     <MdShoppingBasket className='text-2xl transition-all duration-100 ease-in-out cursor-pointer text-textColor hover:text-headingColor'/>
                     <div className='absolute top-0 flex items-center justify-center w-5 h-5 rounded-full -right-2 bg-cartNumBg'>
                         <p className='text-xs font-semibold text-white '>3</p>
                     </div>
                 </div>
-
+                
                 {/* ============= user profile */}
                 <div className='relative h-full '>
                     
@@ -90,7 +91,7 @@ const Header = () => {
                 </div>
                 </div>
             </div>
-
+            <CartContainer/>
             {/* ============= For mobile ============= */}
             <div className='flex items-center justify-between w-full h-full md:hidden'>
                 {/* ============= cart  */}
