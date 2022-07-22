@@ -16,10 +16,10 @@ const FoodsMenu = ({setCatagory,catagory}) => {
             {
                 catagories.map(item=>(
                     <div className={`group ${catagory === item.urlParamName ? "bg-red-600" : "bg-gray-50"} flex flex-col items-center justify-center h-32 md:h-40 md:w-[8rem] min-w-[6rem] transition-all ease-in-out duration-300 rounded shadow-lg   hover:-mt-2 hover:bg-red-600 `} onClick={()=>setCatagory(item.urlParamName)}>
-                        <div className='flex items-center justify-center p-2 bg-red-600 rounded-full md:p-3 group-hover:bg-white'>
-                            {item.icon}
+                        <div className={`flex ${catagory === item.urlParamName ? "bg-white" : "bg-red-600 group-hover:bg-white"} items-center justify-center p-2  rounded-full md:p-3 `}>
+                            {catagory === item.urlParamName ? item.icon.t : item.icon.o}
                         </div>
-                        <p className={`mt-4 ${catagory === item.urlParamName ? "text-white" : "text-lightTextGray"} font-semibold  group-hover:text-white`}>
+                        <p className={`mt-4 ${catagory === item.urlParamName ? "text-white" : "text-lightTextGray group-hover:text-white"} font-semibold  `}>
                             {item.name}
                         </p>
                     </div>

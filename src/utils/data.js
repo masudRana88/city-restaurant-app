@@ -15,42 +15,63 @@ export const catagories = [
         id : 1,
         name : "Chicken",
         urlParamName : 'chicken',
-        icon: <MdFastfood className={`text-xl text-gray-200  md:text-3xl group-hover:text-red-500`}/>
+        icon: {
+            o: <MdFastfood className={`text-xl text-gray-200  md:text-3xl group-hover:text-red-500`}/>,
+            t: <MdFastfood className={`text-xl text-red-500 md:text-3xl group-hover:text-red-500`}/>
+        }
     },
     {
         id : 2,
         name : "Curry",
         urlParamName : 'curry',
-        icon: <MdFastfood className='text-xl text-gray-200 md:text-3xl group-hover:text-red-500'/>
+        icon: {
+            o: <MdFastfood className={`text-xl text-gray-200  md:text-3xl group-hover:text-red-500`}/>,
+            t: <MdFastfood className={`text-xl text-red-500 md:text-3xl group-hover:text-red-500`}/>
+        }
     },
     {
         id : 3,
         name : "Fish",
         urlParamName : 'fish',
-        icon: <MdFastfood className='text-xl text-gray-200 md:text-3xl group-hover:text-red-500'/>
+        icon: {
+            o: <MdFastfood className={`text-xl text-gray-200  md:text-3xl group-hover:text-red-500`}/>,
+            t: <MdFastfood className={`text-xl text-red-500 md:text-3xl group-hover:text-red-500`}/>
+        }
     },
     {
         id : 4,
         name : "Fruits",
         urlParamName : 'fruits',
-        icon: <MdFastfood className='text-xl text-gray-200 md:text-3xl group-hover:text-red-500'/>
+        icon: {
+            o: <MdFastfood className={`text-xl text-gray-200  md:text-3xl group-hover:text-red-500`}/>,
+            t: <MdFastfood className={`text-xl text-red-500 md:text-3xl group-hover:text-red-500`}/>
+        }
     },
     {
         id : 5,
         name : "Icecreams",
         urlParamName : 'icecreams',
-        icon: <MdFastfood className='text-xl text-gray-200 md:text-3xl group-hover:text-red-500'/>
+        icon: {
+            o: <MdFastfood className={`text-xl text-gray-200  md:text-3xl group-hover:text-red-500`}/>,
+            t: <MdFastfood className={`text-xl text-red-500 md:text-3xl group-hover:text-red-500`}/>
+        }
     },
     {
         id : 6,
         name : "Rice",
         urlParamName : 'rice',
-        icon: <MdFastfood className='text-xl text-gray-200 md:text-3xl group-hover:text-red-500'/>
+        icon: {
+            o: <MdFastfood className={`text-xl text-gray-200  md:text-3xl group-hover:text-red-500`}/>,
+            t: <MdFastfood className={`text-xl text-red-500 md:text-3xl group-hover:text-red-500`}/>
+        }
     },
     {
         id : 7,
         name : "Soft Drinks",
         urlParamName : 'drinks',
-        icon: <MdFastfood className='text-xl text-gray-200 md:text-3xl group-hover:text-red-500'/>
+        icon: {
+            o: <MdFastfood className={`text-xl text-gray-200  md:text-3xl group-hover:text-red-500`}/>,
+            t: <MdFastfood className={`text-xl text-red-500 md:text-3xl group-hover:text-red-500`}/>
+        }
     },
 ]
