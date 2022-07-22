@@ -26,9 +26,7 @@ code {
 }
 
 
-.hover-p-text-white:hover p{
-  color: white !important;
-}
+
 
 @tailwind base;
 @tailwind components;
